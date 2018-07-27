@@ -6,6 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
+import android.widget.Button;
 import android.widget.TextView;
 
 import java.util.List;
@@ -48,13 +49,23 @@ public class EquityAdapter extends RecyclerView.Adapter<EquityAdapter.ViewHolder
         public TextView symbol;
         public TextView currency;
         public TextView pricingDate;
+        Button button;
         public ViewHolder(View itemView){
             super(itemView);
             name = itemView.findViewById(R.id.name);
             symbol = itemView.findViewById(R.id.symbol);
             currency = itemView.findViewById(R.id.currency);
             pricingDate = itemView.findViewById(R.id.pricingDate);
+            button = itemView.findViewById(R.id.button);
             itemView.setOnClickListener(this);
+            button.setOnClickListener(this);
+            button.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    equityDetails.remove(getAdapterPosition());
+                    notifyDataSetChanged();
+                }
+            });
 
         }
 
