@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@color/colorAccent">
+
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@color/colorPrimary"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark" />
+
+    <EditText
+        android:id="@+id/editText"
+
+        android:layout_width="267dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/toolbar"
+        android:layout_marginStart="33dp"
+        android:focusableInTouchMode="false"
+        android:hint="Search For Equities"
+        android:textStyle="bold"/>
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rViewEquities"
+        android:layout_width="wrap_content"
+        android:layout_height="435dp"
+        android:layout_above="@+id/relativeLayout"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="153dp"
+        android:backgroundTint="@color/colorRed"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/relativeLayout">
+
+        <Button
+            android:id="@+id/symbolSort"
+            android:layout_width="94dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            android:text="Symbol Sort" />
+
+        <Button
+            android:id="@+id/currencySort"
+            android:layout_width="94dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginEnd="93dp"
+            android:text="Currency Sort" />
+
+        <Button
+            android:id="@+id/pricingDateSort"
+            android:layout_width="97dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="108dp"
+            android:text="Pricing Date Sort" />
+
+
+        <Button
+            android:id="@+id/nameSort"
+            android:layout_width="76dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:text="Name Sort" />
+
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="200dp"
+        android:layout_height="35dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="66dp"
+        android:layout_marginTop="110dp"
+        android:gravity="center"
+        android:text="Selected Equities"
+        android:textSize="20dp" android:textStyle="bold"/>
+
+
+</RelativeLayout>
